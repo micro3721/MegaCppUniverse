@@ -5,7 +5,7 @@
  * 我承接软件定制开发服务,欢迎垂询
  */
 
-#include "include/stack.h"
+#include "../include/stack.h"
 #include <iostream>
 #include <cstdlib>     // for rand(), srand()
 #include <ctime>       // for time>

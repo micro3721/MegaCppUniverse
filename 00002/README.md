@@ -1,3 +1,9 @@
+ <small>Author: github.com/micro3721</small>
+ <small>E-mail: mysolution@qq.com</small>
+ <small>Provide software outsourcing services</small>
+ <small>我承接软件定制开发服务,欢迎垂询</small>
+ 
+
 ### 代码结构
 
 1. **GenericContainer.h**：包含 `GenericContainer` 类模板的声明和通用成员函数的定义，以及模板特化类的声明。
@@ -10,16 +16,23 @@
 ### 代码解析
 
 1. **基本的模板类 `GenericContainer`**:
+
    - `template <typename T>` 定义了一个通用容器类。
    - 构造函数、获取值、设置值和打印值的方法。
+
 2. **模板特化**:
+
    - `template <> class GenericContainer<std::string>` 针对 `std::string` 类型进行了特化，实现了不同的 `printValue` 方法。
+
 3. **成员函数模板 `Collection`**:
+
    - `template <typename T>` 定义了一个集合类，用于存储类型为 `T` 的元素。
    - `template <typename U>` 成员函数模板，用于查找元素。
+
 4. **`main` 函数**:
+
    - 展示了如何使用模板类 `GenericContainer` 和 `Collection`，并调用其成员函数。
-   
+
    
 
 

@@ -1,6 +1,9 @@
  <small>Author: github.com/micro3721</small>
+
  <small>E-mail: mysolution@qq.com</small>
+
  <small>Provide software outsourcing services</small>
+
  <small>我承接软件定制开发服务,欢迎垂询</small>
 
 # MegaCppUniverse

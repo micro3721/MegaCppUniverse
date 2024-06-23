@@ -1,3 +1,11 @@
+/**
+ * Author: github.com/micro3721
+ * E-mail: mysolution@qq.com
+ * Provide software outsourcing services
+ * 我承接软件定制开发服务,欢迎垂询
+ */
+
+
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 

@@ -1,3 +1,11 @@
+/**
+ * Author: github.com/micro3721
+ * E-mail: mysolution@qq.com
+ * Provide software outsourcing services
+ * 我承接软件定制开发服务,欢迎垂询
+ */
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "functions.h"

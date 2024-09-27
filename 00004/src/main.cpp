@@ -7,25 +7,23 @@
 
 int main() {
     // 创建原始对象
-    MyClass obj1(100, 1);
+    MyClass obj1(100, 200, 1);
     obj1.print();
 
-    // 使用编译器提供的默认浅拷贝
+    // 使用拷贝构造函数（深拷贝）
     MyClass obj2 = obj1;
     obj2.print();
 
-    // 自定义浅拷贝构造函数
-    MyClass obj3(obj1, false);  // 浅拷贝
+    // 直接使用赋值运算符
+    MyClass obj3(0, 0, 3);
+    obj3 = obj1;  // 深拷贝和共享指向同一内存
     obj3.print();
 
-    // 自定义深拷贝构造函数
-    MyClass obj4(obj1, true);   // 深拷贝
+    // 另一个赋值实例
+    MyClass obj4(50, 60, 4);
+    obj4 = obj2;  // 深拷贝和共享指向同一内存
     obj4.print();
-
-    // 使用赋值运算符重载
-    MyClass obj5;
-    obj5 = obj1;   // 深拷贝赋值
-    obj5.print();
 
     return 0;
 }
+

@@ -30,10 +30,35 @@ void demonstrateDigitalLibrary() {
     }
 }
 
+// 演示模板别名 VecPtr
+void demonstrateVecPtr() {
+    VecPtr<int> intVec = new vector<int>{1, 2, 3, 4, 5};
+    cout << "Vector of integers using VecPtr: ";
+    for (const auto &num: *intVec) {
+        cout << num << " ";
+    }
+    cout << endl;
+    delete intVec;  // 释放动态分配的内存
+}
+
+// 演示类型推导与约束
+void demonstrateTypeAliasAndConstraint() {
+    DigitalLibrary digitalLib;
+    addSpecialBook(digitalLib, string("Design Patterns"));  // 允许
+    // addSpecialBook(digitalLib, 42);  // 错误，int 不是 string
+    showAvailableBooks(digitalLib);
+}
+
 int main() {
     // 演示数字图书馆
     demonstrateDigitalLibrary();
 
+    // 演示模板别名 VecPtr
+    demonstrateVecPtr();
+
+    // 演示类型推导与约束
+    cout << "Demonstrating type alias and constraint:" << endl;
+    demonstrateTypeAliasAndConstraint();
     return 0;
 }
 

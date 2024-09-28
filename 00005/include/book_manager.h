@@ -10,6 +10,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <type_traits>
 
 // 使用命名空间
 using std::cout;
@@ -23,6 +24,11 @@ using BookList = vector<string>;
 // 模板别名
 template<typename T>
 using VecPtr = vector<T> *;
+
+
+// 类型推导与约束
+template<typename T>
+using EnableIfString = typename std::enable_if<std::is_same<T, string>::value>::type;  // 仅允许类型为 string
 
 // 基类
 class Library {
@@ -61,6 +67,16 @@ public:
 void showAvailableBooks(const Library &library);
 
 void demonstrateDigitalLibrary();
+
+
+// 使用模板别名处理动态分配的 vector
+void demonstrateVecPtr();
+
+// 展示类型推导与约束的功能
+template<typename T, typename = EnableIfString<T>>
+void addSpecialBook(DigitalLibrary &lib, const T &book) {
+    lib.addEBook(book);
+}
 
 #endif // BOOK_MANAGER_H
 
